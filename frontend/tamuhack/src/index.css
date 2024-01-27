@@ -1,0 +1,18 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+#navbar-content {
+    background-color: grey;
+    font: "monospace"
+}
+
+#navbar-content>* {
+    border-radius: none;
+    border-color: black;
+    background-color: grey;
+    height: 40px;
+    padding: 0 40px;
+}
