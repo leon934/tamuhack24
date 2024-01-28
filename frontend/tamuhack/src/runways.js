@@ -3,36 +3,52 @@ import Runway from "./runway.js";
 import FeedbackComponent from "./feedbackComponent.js";
 import ChatBot from "./Bot.js";
 import { useEffect, useState } from "react";
-// import useFetch from "./useFetch.js";
+import useFetch from "./useFetch.js";
 function Runways() {
-    const renderRunways = (runwayAvailability, flightNumbers) => {
-        let myRunways = [];
-        for (let i = 0; i < runwayAvailability.length; i++) {
-            myRunways.push(<Runway key={flightNumbers[i]} runwayNumber={i} timeFlightOnRunway={runwayAvailability[i]} flightNumber={flightNumbers[i]} />)
-        }
-        return myRunways;
+    const NUMOFRUNWAYS = 7;
+    const [flightNum, setFlightNum] = useState(0);  // 7 runways at DFW
+
+    const today = new Date(); // Find today's date which will grab today's flights.
+    // around 3 minutes to clear the runway
+
+    let year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let day = today.getDate();
+
+    year = year.toString();
+    month = month.toString();
+    day = day.toString();
+
+    if (month < 10) {
+        month = "0" + month;
     }
-    const flightNumbers = [2005, 2010, 448, 2978]
-    const [runwayAvailability, setRunwayAvailability] = useState([100, -1, -1, 100]);
+
+    if (day < 10) {
+        day = "0" + day;
+    }
+
+    const { data } = useFetch({ day, month, year }) // get flight data in sorted by arrival in an array
 
     useEffect(() => {
-        const incremenetAllAvailability = () => {
-            let newArr = [];
-            for (let i = 0; i < runwayAvailability.length; i++) {
-                newArr.push(runwayAvailability[i] + 1);
-            }
-            console.log(newArr)
-            setRunwayAvailability(newArr);
-        }
         const intervalID = setInterval(() => {
-            incremenetAllAvailability();
-        }, 1000 * 60)
+            setFlightNum(flightNum + 1)
+        }, 1000)
 
-        return () => {
-            clearInterval(intervalID)
+        return () => clearInterval(intervalID);
+    }, [flightNum])
+
+    const renderRunways = (runwayAvailability, data, flightNum) => {
+        if (data) {
+            let myRunways = [];
+            for (let i = flightNum; i < flightNum + NUMOFRUNWAYS; i++) {
+                myRunways.push(<Runway key={data[i].flightNumber} runwayNumber={i % NUMOFRUNWAYS} isAvailable={runwayAvailability[i]} flightNumber={data[i].flightNumber} />)
+            }
+            return myRunways;
+        } else {
+            return <div></div>
         }
-    }, [runwayAvailability])
-
+    }
+    const [runwayAvailability, setRunwayAvailability] = useState([false, false, false, false, false, false, false]);
     return (
         <>
             <Navbar />
@@ -40,12 +56,12 @@ function Runways() {
                 <thead>
                     <tr>
                         <th>Runway Number</th>
-                        <th>How Long Flight On Runway</th>
+                        <th>Is Available</th>
                         <th>Flight Number</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {renderRunways(runwayAvailability, flightNumbers)}
+                    {renderRunways(runwayAvailability, data, flightNum)}
                 </tbody>
             </table>
             <FeedbackComponent />
