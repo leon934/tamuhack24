@@ -12,7 +12,7 @@ function Survey(props) {
                     {props.content}
                     <form onSubmit={handleSubmit}>
                         <textarea placeholder="Give us your feedback" cols={75} rows={10} name="feedback" />
-                        <button type="submit">Submit</button>
+                        <button id="surveySubmit" type="submit">Submit</button>
                     </form>
                 </div>
             </div>

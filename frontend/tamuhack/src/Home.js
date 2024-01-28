@@ -26,7 +26,7 @@ function Home() {
                 handleClose={togglePopup}
                 handleConfirmation={toggleConfirmation}
                 content={<div>
-                    <h3>Feeback Survey</h3>
+                    <h3>Feedback Survey</h3>
                 </div>}
             />}
             {confirmationOpen && <Popup
