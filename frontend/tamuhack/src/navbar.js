@@ -1,9 +1,9 @@
 function Navbar() {
     return (
         <div id="navbar-content">
-            <input type="button" value="Home" />
-            <input type="button" value="Open Runways" />
-            <input type="button" value="AI Software" />
+            <a href={"/"}>Home</a>
+            <a href={"/openrunways"}>Open Runways</a>
+            <a href={"/AI"}>AI Software</a>
         </div>
     );
 }

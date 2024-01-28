@@ -2,11 +2,35 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App.js'
+import Runways from "./runways.js";
+import Home from "./Home.js";
+import Machinelearning from "./machinelearning.js";
+import ErrorPage from './ErrorPage.js';
+import {
+  createBrowserRouter,
+  Router,
+  RouterProvider
+} from "react-router-dom";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/openrunways",
+    element: <Runways />
+  },
+  {
+    path: "/AI",
+    element: <Machinelearning />
+  }
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
