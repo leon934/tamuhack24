@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 const port = 3000;
 
 const Plane = require("./models/planeModel.js")
-
+const Weather = require("./models/weatherModel.js")
 
 const today = new Date(); // Find today's date which will grab today's flights.
 
@@ -44,6 +44,23 @@ fetch(`https://aircontrol1-c8a7574536ec.herokuapp.com/flights?date=${year}-${mon
             plane.save()
         }
     });
+
+fetch("http://api.weatherapi.com/v1/current.json?key=5f795271b5894c98876170238242801&q=Dallas&aqi=no")
+    .then(response => response.json())
+    .then(data => {
+        const weather = new Weather({
+            location: data.location,
+            current: data.current,
+            wind_mph: data.wind_mph,
+            cloud: data.cloud,
+            gust_mph: data.gust_mph,
+            precip_in: data.precip_in,
+            humidity: data.humidity
+        })
+
+        console.log(weather)
+        weather.save()
+    })
 
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
