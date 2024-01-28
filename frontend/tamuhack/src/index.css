@@ -70,14 +70,21 @@ body {
     font-size: 20px;
 }
 
+#survey img {
+    width: 40px;
+}
+
 #survey {
     cursor: pointer;
     background-color: #dddddd;
     padding: 5px;
     position: fixed;
     bottom: 0;
-    right: 0;
+    left: 0;
     border: none;
+    border-radius: 150px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 #surveySubmit {
