@@ -1,6 +1,7 @@
 import Navbar from "./navbar.js";
 import Survey from "./survey.js";
 import Popup from "./popup.js";
+import Logo from "./Logo.js";
 import { useState } from "react"
 
 function Home() {
@@ -16,7 +17,7 @@ function Home() {
         <>
             <Navbar />
             <div id="HomePage">
-                <h1>Automated Airline Traffic</h1>
+                <Logo fontSize={40} />
                 <div>In a world where increasing traffic congestion is bad, we solve that problem by automating air traffic control</div>
                 <a href="/openrunways">Try it out</a>
             </div>
