@@ -3,7 +3,7 @@ function Runway({ runwayNumber, isAvailable, flightNumber }) {
         <tr key={runwayNumber}>
             <td>{runwayNumber}</td>
             <td>{(isAvailable) ? <div>Yes</div> : <div>No</div>}</td>
-            <td><a dataset-url={flightNumber}>{flightNumber}</a></td>
+            <td><a>{(flightNumber != 0 && flightNumber)}</a></td>
         </tr>
     )
 }
