@@ -5,7 +5,9 @@ function Home() {
         <>
             <Navbar />
             <div id="HomePage">
-                <h1>Home Page</h1>
+                <h1>Automated Airline Traffic</h1>
+                <div>In a world where increasing traffic congestion is bad, we solve that problem by automating air traffic control</div>
+                <a href="/openrunways">Try it out</a>
             </div>
         </>
     )
