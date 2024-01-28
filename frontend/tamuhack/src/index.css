@@ -1,18 +1,57 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: black;
+    background-color: white;
 }
 
 #navbar-content {
-    background-color: grey;
-    font: "monospace"
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dddddd;
 }
 
-#navbar-content>* {
-    border-radius: none;
-    border-color: black;
+
+#navbar-content>li {
+    float: left;
+}
+
+#navbar-content>li>a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+#navbar-content>*:hover {
+    background-color: lightgrey;
+}
+
+#HomePage {
+    text-align: center;
+    margin: 150px auto;
     background-color: grey;
-    height: 40px;
-    padding: 0 40px;
+    display: block;
+    width: 40%;
+    height: 300px;
+    padding: 50px;
+}
+
+#HomePage>a {
+    background: blue;
+    color: lightblue;
+    padding: 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 50px;
+    display: inline-block;
+}
+
+#HomePage>a:hover {
+    background: rgb(64, 64, 255);
+}
+
+#HomePage>div {
+    font-size: 30px;
 }
