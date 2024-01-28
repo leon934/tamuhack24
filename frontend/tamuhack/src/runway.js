@@ -1,8 +1,9 @@
-function Runway({ runwayNumber, isAvailable }) {
+function Runway({ runwayNumber, isAvailable, flightNumber }) {
     return (
-        <tr>
+        <tr key={runwayNumber}>
             <td>{runwayNumber}</td>
-            <td>{isAvailable ? <div>Is Available</div> : <div>Not Available</div>}</td>
+            <td>{isAvailable ? <div>Yes</div> : <div>No</div>}</td>
+            <td><a dataset-url={flightNumber}>{flightNumber}</a></td>
         </tr>
     )
 }

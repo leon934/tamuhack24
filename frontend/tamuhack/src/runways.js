@@ -1,34 +1,32 @@
 import Navbar from "./navbar.js";
 import Runway from "./runway.js";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+// import useFetch from "./useFetch.js";
 
 function Runways() {
-    // useEffect(() => {
-    //     const numOfRunways = 7;
-    //     for (let i = 0; i < numOfRunways; i++) {
-    //         myRunways.push(i);
-    //     }
-    // }, []) // Only runs after initial render
-
-    // runwayAvailability is array of true or false values
-    const renderRunways = (runwayAvailability) => {
+    // const [url, setUrl] = useState("")
+    const renderRunways = (runwayAvailability, flightNumbers) => {
         let myRunways = [];
         for (let i = 0; i < runwayAvailability.length; i++) {
-            myRunways.push(<Runway runwayNumber={i} isAvailable={runwayAvailability[i]} />)
+            myRunways.push(<Runway key={flightNumbers[i]} runwayNumber={i} isAvailable={runwayAvailability[i]} flightNumber={flightNumbers[i]} />)
         }
         return myRunways;
     }
+    const flightNumbers = [2005, 2010, 448, 2978]
+    const runwayAvailability = [true, false, true, false]
 
     return (
         <>
             <Navbar />
-            <h1>Runways</h1>
-            <table>
-                <tr>
-                    <th>Runway Number</th>
-                    <th>Flight</th>
-                </tr>
-                {renderRunways([true, false, true, false])}
+            <table id="runwaydata">
+                <tbody>
+                    <tr>
+                        <th class="runwaydata-header">Runway Number</th>
+                        <th class="runwaydata-header">Available</th>
+                        <th class="runwaydata-header">Flight Number</th>
+                    </tr>
+                    {renderRunways(runwayAvailability, flightNumbers)}
+                </tbody>
             </table>
         </>
     )
