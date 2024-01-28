@@ -1,5 +1,7 @@
 import Navbar from "./navbar.js";
 import Runway from "./runway.js";
+import FeedbackComponent from "./feedbackComponent.js";
+import ChatBot from "./Bot.js";
 import { useEffect, useState } from "react";
 // import useFetch from "./useFetch.js";
 function Runways() {
@@ -46,6 +48,8 @@ function Runways() {
                     {renderRunways(runwayAvailability, flightNumbers)}
                 </tbody>
             </table>
+            <FeedbackComponent />
+            <ChatBot />
         </>
     )
 }

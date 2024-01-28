@@ -4,7 +4,6 @@ import './index.css';
 import Runways from "./runways.js";
 import Home from "./Home.js";
 import ErrorPage from './ErrorPage.js';
-import MachineLearning from "./machineLearing.js";
 import {
   createBrowserRouter,
   Router,
@@ -18,12 +17,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
-    path: "/openrunways",
+    path: "/runways",
     element: <Runways />
-  },
-  {
-    path: "/Bot",
-    element: <MachineLearning />
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

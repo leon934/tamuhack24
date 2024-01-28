@@ -70,14 +70,26 @@ body {
     font-size: 20px;
 }
 
+#survey img {
+    width: 40px;
+}
+
 #survey {
     cursor: pointer;
     background-color: #dddddd;
     padding: 5px;
     position: fixed;
     bottom: 0;
-    right: 0;
+    left: 0;
     border: none;
+    border-radius: 50%;
+    margin-left: 2%;
+    margin-bottom: 4%;
+}
+
+#survey:hover {
+    background-color: #898989;
+    cursor: pointer;
 }
 
 #surveySubmit {
@@ -85,6 +97,11 @@ body {
     background-color: #dddddd;
     padding: 15px;
     border: none;
+}
+
+#surveySubmit:hover {
+    background-color: #898989;
+    cursor: pointer;
 }
 
 .popup-box {
@@ -111,11 +128,13 @@ body {
 
 .btn-close {
     cursor: pointer;
-    border: 1px solid #999;
-    border-radius: 50%;
-    position: fixed;
-    right: calc(25% - 30px);
-    top: 15px;
+    border: none;
+    background-color: transparent;
+    margin-right: 0px;
+    text-align: center;
+    float: right;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .box textarea {
@@ -167,4 +186,10 @@ body {
 
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
+}
+
+#errorContainer {
+    text-align: center;
+    display: inline;
+    margin: auto 50%;
 }

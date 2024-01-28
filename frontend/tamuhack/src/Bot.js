@@ -23,7 +23,8 @@ const Chatbot = () => {
                 useSessionStorage: true,
                 showBotInfoPage: true,
                 theme: "prism",
-                themeColor: "#2563eb"
+                themeColor: "#2563eb",
+                stylesheet: "https://webchat-styler-css.botpress.app/prod/code/6967e89d-4324-4b97-b8fe-b68ea7937878/v80403/style.css"
             })
         }
     }, [])
