@@ -5,14 +5,25 @@ body {
 }
 
 #navbar-content {
-    background-color: grey;
-    font: "monospace"
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dddddd;
 }
 
-#navbar-content>* {
-    border-radius: none;
-    border-color: black;
-    background-color: grey;
-    height: 40px;
-    padding: 0 40px;
+
+#navbar-content>li {
+    float: left;
+}
+
+#navbar-content>li>a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+#navbar-content>*:hover {
+    background-color: lightgrey;
 }

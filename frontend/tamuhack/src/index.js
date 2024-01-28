@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App.js'
 import Runways from "./runways.js";
 import Home from "./Home.js";
 import Machinelearning from "./machinelearning.js";

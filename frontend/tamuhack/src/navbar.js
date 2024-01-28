@@ -1,10 +1,10 @@
 function Navbar() {
     return (
-        <div id="navbar-content">
-            <a href={"/"}>Home</a>
-            <a href={"/openrunways"}>Open Runways</a>
-            <a href={"/AI"}>AI Software</a>
-        </div>
+        <ul id="navbar-content">
+            <li><a href={"/"}>Home</a></li>
+            <li><a href={"/openrunways"}>Open Runways</a> </li>
+            <li><a href={"/AI"}>AI Software</a> </li>
+        </ul>
     );
 }
 export default Navbar;
