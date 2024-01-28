@@ -12,16 +12,7 @@ function Runways() {
     }
     const flightNumbers = [2005, 2010, 448, 2978]
     const [runwayAvailability, setRunwayAvailability] = useState([100, -1, -1, 100]);
-    const [count, setCount] = useState(0);
 
-    // const changeOneAvailability = (runwayIndex, newTime) => {
-    //     let newArr = [];
-    //     for (const element in runwayAvailability) {
-    //         newArr.push(element);
-    //     }
-    //     newArr[runwayIndex] = newTime;
-    //     setRunwayAvailability(newArr);
-    // }
     useEffect(() => {
         const incremenetAllAvailability = () => {
             let newArr = [];

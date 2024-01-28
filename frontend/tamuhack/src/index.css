@@ -76,3 +76,89 @@ body {
 .runwaydata-header {
     padding: 10px;
 }
+
+#survey {
+    cursor: pointer;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#survey #survey-popup {
+    position: absolute;
+    visibility: hidden;
+    background-color: lightgrey;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    z-index: 1;
+    animation-name: fadeIn;
+    animation-duration: 1000ms;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#survey #survey-popup {
+    visibility: visible;
+    animation: fadeIn 1s;
+}
+
+.popup-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+}
+
+.box {
+    position: relative;
+    width: 50%;
+    min-height: 300px;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 4px;
+    margin: 20px auto;
+    padding: 20px;
+    overflow: auto;
+    font-size: 20px;
+}
+
+.btn-close {
+    cursor: pointer;
+    border: 1px solid #999;
+    border-radius: 50%;
+    position: fixed;
+    right: calc(25% - 30px);
+    top: 15px;
+}
+
+.box textarea {
+    font-size: 15px;
+}
+
+.box button[type='submit'] {
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: grey;
+}
+
+.message {
+    text-align: center;
+    margin: auto;
+    font-size: 50px;
+    padding: 100px;
+}
