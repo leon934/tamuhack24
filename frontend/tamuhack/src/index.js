@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
-    path: "/openrunways",
+    path: "/runways",
     element: <Runways />
   },
   {

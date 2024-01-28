@@ -9,7 +9,7 @@ function Home() {
             <div id="HomePage">
                 <Logo fontSize={40} />
                 <div>In a world where increasing traffic congestion is bad, we solve that problem by automating air traffic control</div>
-                <a href="/openrunways">Try it out</a>
+                <a href="/runways">Try it out</a>
             </div>
             <FeedbackComponent />
         </>
