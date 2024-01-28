@@ -34,13 +34,15 @@ function Runways() {
     return (
         <>
             <Navbar />
-            <table id="runwaydata">
-                <tbody>
+            <table className="styled-table">
+                <thead>
                     <tr>
-                        <th className="runwaydata-header">Runway Number</th>
-                        <th className="runwaydata-header">How Long Flight On Runway</th>
-                        <th className="runwaydata-header">Flight Number</th>
+                        <th>Runway Number</th>
+                        <th>How Long Flight On Runway</th>
+                        <th>Flight Number</th>
                     </tr>
+                </thead>
+                <tbody>
                     {renderRunways(runwayAvailability, flightNumbers)}
                 </tbody>
             </table>
