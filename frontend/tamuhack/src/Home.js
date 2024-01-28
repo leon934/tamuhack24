@@ -8,7 +8,11 @@ function Home() {
             <Navbar />
             <div id="HomePage">
                 <Logo fontSize={40} />
-                <div>In a world where increasing traffic congestion is bad, we solve that problem by automating air traffic control</div>
+                <div>
+                    Air Congestion can cause huge delays. Automating the process leads to
+                    more eco-friendly services, higher customer satisfaction, and has the potential
+                    to compensate for the labor shortage after the pandemic.
+                </div>
                 <a href="/runways">Try it out</a>
             </div>
             <FeedbackComponent />
