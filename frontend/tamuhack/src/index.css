@@ -27,3 +27,13 @@ body {
 #navbar-content>*:hover {
     background-color: lightgrey;
 }
+
+#HomePage {
+    text-align: center;
+    margin: 150px auto;
+    background-color: grey;
+    display: block;
+    width: 40%;
+    height: 300px;
+    padding: 50px;
+}
