@@ -6,7 +6,6 @@ function Navbar() {
             <ul id="navbar-content">
                 <li><a href={"/"}>Home</a></li>
                 <li><a href={"/runways"}>Runways</a> </li>
-                <li><a href={"/Bot"}>AI Software</a> </li>
             </ul>
             <Logo fontSize={20} />
         </div>

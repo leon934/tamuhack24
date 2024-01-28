@@ -99,6 +99,11 @@ body {
     border: none;
 }
 
+#surveySubmit:hover {
+    background-color: #898989;
+    cursor: pointer;
+}
+
 .popup-box {
     position: fixed;
     left: 0;
@@ -181,4 +186,10 @@ body {
 
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
+}
+
+#errorContainer {
+    text-align: center;
+    display: inline;
+    margin: auto 50%;
 }
