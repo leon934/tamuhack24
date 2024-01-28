@@ -2,7 +2,6 @@
 ![logogreycolor](https://github.com/leon934/tamuhack24/assets/157909424/c3ef4ef5-01ff-4639-ad25-2e2550ffcb20)
 
 ## Deployment:
-
 (website link here)!
 
 ## Tech Stacks
