@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 const useFetch = ({ day, month, year }) => {
     const [data, setData] = useState(null);
     useEffect(() => {
-        console.log("Yes");
         const compareByArrival = (flight1, flight2) => {
             const date1 = new Date(flight1.arrivalTime);
             const date2 = new Date(flight2.arrivalTime);
